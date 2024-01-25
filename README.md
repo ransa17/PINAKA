@@ -1,7 +1,8 @@
-**Placement Portal**
-A project on placement coordination portal between companies and candidates.
+# Placement Portal
+__A project on placement coordination portal between companies and candidates.__
 
-**Following are the services/functionalities that the portal provides **
+
+### Following are the services/functionalities that the portal provides:-
 1. Registration of candidates as well as companies.
 2. Placement Proposal which is to be released companies to hire employees and interns.
 3. Candidates fill out the form against proposal application upto due date.
