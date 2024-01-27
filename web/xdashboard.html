@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/src/css/bootstrap.min.css">
+    <style>
+      @media (max-width:500px){
+        #nav{
+          display:none;
+        }
+        #main{
+          width: 100% !important;
+        }
+      }
+    </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div id="nav" class="col-4 position-fixed" style="height: 100%; background-color: lightblue;">
+        <h1>Nav container</h1>
+        <p>This is the nav container.</p>
+      </div>
+      <div id="main" class="col-8 offset-4" style="height: 100%; overflow-y: scroll; background-color: lightgreen;">
+    <div class="card">
+      <div class="card-title">
+          <h3>Apply for an Internship > {{Company_Name}}</h3>
+      </div>
+      <div class="card-body">
+  <form action="./apply" method="POST">
+      
+          <div class="form-group">
+            <label for="exampleInputEmail1">Resume/Cv.*</label>
+            <input type="file" class="form-control" id="resume" name="resume" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Cover Letter</label>
+            <input type="file" class="form-control" id="coverletter" name="coverletter" placeholder="Password">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        
+        
+  </form>
+      </div>
+  </div>
+      </div>
+    </div>
+  </div>
+  
+    <script src="bootstrap/src/js/bootstrap.min.js"></script>
+</body>
+</html>

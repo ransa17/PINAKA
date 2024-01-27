@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participation Dashboard</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .dashboard {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .metric {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      flex: 1;
+      margin: 10px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Participation Dashboard</h1>
+  </header>
+
+  <div class="dashboard">
+    <div class="metric" id="participationMetric">
+      <h2>Participations</h2>
+      <p id="participationCount">0</p>
+    </div>
+
+    <div class="metric" id="selectedMetric">
+      <h2>Selected Participations</h2>
+      <p id="selectedCount">0</p>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button onclick="selectParticipation()">Select Participation</button>
+    <button onclick="deselectParticipation()">Deselect Participation</button>
+  </div>
+
+  <script>
+    let totalParticipations = 0;
+    let selectedParticipations = 0;
+
+    function updateMetrics() {
+      document.getElementById('participationCount').innerText = totalParticipations;
+      document.getElementById('selectedCount').innerText = selectedParticipations;
+    }
+
+    function selectParticipation() {
+      totalParticipations++;
+      selectedParticipations++;
+      updateMetrics();
+    }
+
+    function deselectParticipation() {
+      if (selectedParticipations > 0) {
+        selectedParticipations--;
+        updateMetrics();
+      }
+    }
+  </script>
+</body>
+</html>

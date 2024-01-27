@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap/src/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- <script type="text/javascript">
+            let headers = new Headers();
+
+            headers.append('Content-Type', 'application/json');
+            headers.append('Accept', 'application/json');
+          
+            headers.append('Access-Control-Allow-Origin', '*');
+            headers.append('Access-Control-Allow-Credentials', 'true');
+          
+            headers.append('GET', 'POST', 'OPTIONS');
+
+          var submitRegisterForm = function(){  
+            fetch('http://localhost:8080/api/v1/createuser',{
+                method: 'POST',
+                headers: headers,
+                body:{
+                    username:document.getElementById("username").value,
+                    name:document.getElementById("name").value,
+                    password:document.getElementById("password").value,
+                    email:document.getElementById("email").value,
+                    skills:document.getElementById("skills").value,
+                    education:document.getElementById("education").value,
+                    adress:document.getElementById("adress").value
+                }
+            }).then(response => {
+	       alert(response);
+        });
+          }
+        
+        </script> -->
+    
+    
+    </head>
+    <body style="background: linear-gradient(45deg, #0ba360 0%,#3cba92 100%);background-attachment:fixed;">
+        <section class="vh-100 bg-image">
+            <div class="mask d-flex align-item-center h-100 gradient-custom-3">
+                <div class="container h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="card" style="border-radius: 15px;margin-top: 100px;margin-bottom:100px;">
+                                <div class="card-body p-4">
+                                <form action="/api/v1/createuser" method="POST" >
+                                    <h2 class="text-uppercase text-center mb-5">
+                                        <i class="fa fa-plus"></i>Register as a Candidate 
+                                    </h2>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label">Candidate Name</label>
+                                        <input type="text" class="form-control form-control-lg" name="name"/>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label">Enter Prefered Username</label>
+                                        <input type="text" class="form-control form-control-lg" name="username"/>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label">Candidates Adress</label>
+                                        <input type="text" class="form-control form-control-lg" name="adress"/>
+                                        
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control form-control-lg" name="email"/>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" class="form-control form-control-lg" name="password"/>
+                                        
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label">Skills:</label>
+                                        <input type="text" class="form-control form-control-lg" name="skills"/>
+                                        
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label">Qualifications</label>
+                                        <input type="text" class="form-control form-control-lg" name="education"/>
+                                    </div>
+                                    <div class="d-grid gap2">
+                                    <input type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" />
+                                    <span style="color:blanchedalmond">Register</span>
+                                    </button>
+                                    </div>
+                                    <div class="d-flex justify-content-center" style="font-size: smaller;">
+                                        Forgot Password , <a href="#">Recover it!</a>
+                                        <p><a href="./">< Back to homepage</a></p>
+                                    </div>
+                                </form>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        
+        <script src="bootstrap/src/js/bootstrap.min.js"></script>
+    </body>
+</html>
